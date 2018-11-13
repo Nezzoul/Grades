@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    class GradeBook
+    public class GradeBook
     {
         public GradeBook()
         {
-           grades  = new List<float>();
+            grades = new List<float>();
         }
 
         public GradeStatistics ComputeStatistics()
@@ -24,7 +24,7 @@ namespace Grades
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
                 sum += grade;
             }
-            stats.AvarageGrade = sum / grades.Count;
+            stats.AverageGrade = sum / grades.Count;
             return stats;
         }
 
